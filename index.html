@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Onur Lokantası</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ea;
+            color: #222;
+        }
+
+        header {
+            background-color: #7b1e1e;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        header p {
+            margin-top: 8px;
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+
+        .menu-container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .category {
+            background-color: white;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .category-button {
+            width: 100%;
+            border: none;
+            background-color: white;
+            padding: 22px;
+            font-size: 21px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-button:hover {
+            background-color: #f8f8f8;
+        }
+
+        .arrow {
+            font-size: 22px;
+            transition: transform 0.3s;
+        }
+
+        .category.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .category-content {
+            display: none;
+            padding: 0 20px 20px;
+        }
+
+        .category.active .category-content {
+            display: block;
+        }
+
+        .menu-item {
+            padding: 18px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .menu-image {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .item-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 28px 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .menu-container {
+                margin-top: 20px;
+            }
+
+            .category-button {
+                font-size: 19px;
+                padding: 19px;
+            }
+
+            .menu-image {
+                height: 220px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Onur Lokantası</h1>
+    <p>Menümüze Hoş Geldiniz</p>
+
+</header>
+
+
+<main class="menu-container">
+
+
+    <!-- ANA YEMEKLER -->
+
+    <div class="category">
+
+        <button class="category-button">
+            <span>Ana Yemekler</span>
+            <span class="arrow">⌄</span>
+        </button>
+
+        <div class="category-content">
+
+            <div class="menu-item">
+
+                <img
+                    src="images/sefin-spesiyali.jpg"
+                    alt="Şefin Spesiyali"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Şefin Spesiyali
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MEZELER -->
+
+    <div class="category">
+
+        <button class="category-button">
+            <span>Mezeler</span>
+            <span class="arrow">⌄</span>
+        </button>
+
+        <div class="category-content">
+
+
+            <div class="menu-item">
+
+                <img
+                    src="images/haydari.png"
+                    alt="Haydari"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Haydari
+                </div>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <img
+                    src="images/hibes.png"
+                    alt="Hibeş"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Hibeş
+                </div>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <img
+                    src="images/biber-dolmasi.png"
+                    alt="Biber Dolması"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Biber Dolması
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- SALATALAR -->
+
+    <div class="category">
+
+        <button class="category-button">
+            <span>Salatalar</span>
+            <span class="arrow">⌄</span>
+        </button>
+
+        <div class="category-content">
+
+            <div class="menu-item">
+
+                <img
+                    src="images/gavurdagi-salatasi.png"
+                    alt="Gavurdağı Salatası"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Gavurdağı Salatası
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TATLILAR -->
+
+    <div class="category">
+
+        <button class="category-button">
+            <span>Tatlılar</span>
+            <span class="arrow">⌄</span>
+        </button>
+
+        <div class="category-content">
+
+            <div class="menu-item">
+
+                <img
+                    src="images/sefe-birak.jpg"
+                    alt="Şefe Bırak"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Şefe Bırak
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- İÇECEKLER -->
+
+    <div class="category">
+
+        <button class="category-button">
+            <span>İçecekler</span>
+            <span class="arrow">⌄</span>
+        </button>
+
+        <div class="category-content">
+
+
+            <div class="menu-item">
+
+                <img
+                    src="images/cola-zero.png"
+                    alt="Coca-Cola Zero"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Coca-Cola Zero
+                </div>
+
+            </div>
+
+
+            <div class="menu-item">
+
+                <img
+                    src="images/ayran.png"
+                    alt="Ayran"
+                    class="menu-image"
+                >
+
+                <div class="item-name">
+                    Ayran
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<script>
+
+    const categoryButtons =
+        document.querySelectorAll(".category-button");
+
+    categoryButtons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const clickedCategory =
+                this.parentElement;
+
+            document
+                .querySelectorAll(".category")
+                .forEach(category => {
+
+                    if (category !== clickedCategory) {
+                        category.classList.remove("active");
+                    }
+
+                });
+
+            clickedCategory.classList.toggle("active");
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
